@@ -41,10 +41,13 @@ public class PlayerController {
     public Player addPlayer(@RequestBody Player thePlayer) {
         Player thePlayerId = playerService.findById(thePlayer.getId());
 
-        if(thePlayerId != null) {
-            throw new RuntimeException("Player with number " + thePlayerId + " already exists.");
-        }
+        Player dbPlayer = playerService.save(thePlayer);
 
+        return dbPlayer;
+    }
+
+    @PutMapping("/players")
+    public Player updatePlayer(@RequestBody Player thePlayer) {
         Player dbPlayer = playerService.save(thePlayer);
 
         return dbPlayer;
