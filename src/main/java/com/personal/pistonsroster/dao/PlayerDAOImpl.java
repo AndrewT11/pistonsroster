@@ -43,11 +43,15 @@ public class PlayerDAOImpl implements PlayerDAO {
 
     @Override
     public Player save(Player thePlayer) {
-        return null;
+        Player dbPlayer = entityManager.merge(thePlayer);
+
+        return dbPlayer;
     }
 
     @Override
     public void deleteById(int id) {
+        Player thePlayer = entityManager.find(Player.class, id);
 
+        entityManager.remove(thePlayer);
     }
 }

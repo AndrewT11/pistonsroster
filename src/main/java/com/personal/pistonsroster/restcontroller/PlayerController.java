@@ -49,4 +49,16 @@ public class PlayerController {
 
         return dbPlayer;
     }
+
+    @DeleteMapping("/players/{id}")
+    public void deletePlayer(@PathVariable int id) {
+        Player thePlayer = playerService.findById(id);
+
+        if(thePlayer == null) {
+            throw new RuntimeException("Player with number does not exist: " + id);
+        }
+
+        playerService.deleteById(id);
+
+    }
 }
