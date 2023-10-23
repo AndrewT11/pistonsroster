@@ -1,5 +1,5 @@
 # Pistons Roster
-simple REST API for Detroit Pistons roster.
+simple Java Spring Boot REST API for Detroit Pistons roster.
 
 # Get Started
 ## Recommended to use MySQL Workbench to for data interaction.
