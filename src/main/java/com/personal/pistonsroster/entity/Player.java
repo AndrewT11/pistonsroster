@@ -3,7 +3,7 @@ package com.personal.pistonsroster.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="player")
+@Table(name="roster")
 public class Player {
     // define fields
     @Id
