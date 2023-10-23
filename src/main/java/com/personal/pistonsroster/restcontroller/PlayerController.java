@@ -1,11 +1,10 @@
 package com.personal.pistonsroster.restcontroller;
 
-import com.personal.pistonsroster.dao.PlayerDAO;
+
 import com.personal.pistonsroster.entity.Player;
+import com.personal.pistonsroster.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,16 +13,40 @@ import java.util.List;
 public class PlayerController {
     // inject employee dao for testing
 
-    private PlayerDAO playerDAO;
+    private PlayerService playerService;
 
     @Autowired
-    public PlayerController(PlayerDAO thePlayerDAO) {
-        this.playerDAO = thePlayerDAO;
+    public PlayerController(PlayerService thePlayerService) {
+        this.playerService = thePlayerService;
     }
 
     // expose "/player" and return a list of players
     @GetMapping("/players")
     public List<Player> findAll() {
-        return playerDAO.findAll();
+        return playerService.findAll();
+    }
+
+    @GetMapping("/players/{id}")
+    public Player findById(@PathVariable int id) {
+        Player thePlayer = playerService.findById(id);
+
+        if(thePlayer == null) {
+            throw new RuntimeException("Player with number does not exist: " + id);
+        }
+
+        return thePlayer;
+    }
+
+    @PostMapping("/players")
+    public Player addPlayer(@RequestBody Player thePlayer) {
+        Player thePlayerId = playerService.findById(thePlayer.getId());
+
+        if(thePlayerId != null) {
+            throw new RuntimeException("Player with number " + thePlayerId + " already exists.");
+        }
+
+        Player dbPlayer = playerService.save(thePlayer);
+
+        return dbPlayer;
     }
 }
