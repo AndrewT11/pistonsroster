@@ -25,6 +25,13 @@ simple Java Spring Boot REST API for Detroit Pistons roster.
 
 ### PUT endpoint:
 #### Update a player: http://localhost:8080/players
+#### JSON format for updating player example: 
+    {
+      "id": 25,
+      "firstName": "Marcus",
+      "lastName": "Sasser",
+      "position": "PG"
+      }
 
 ### DELETE endpoint:
 #### Delete a player: http://localhost:8080/players/{number}
