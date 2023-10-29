@@ -7,7 +7,8 @@ simple Java Spring Boot REST API for Detroit Pistons roster.
 ## Open included .SQL script in MySQL Workbench:  
 ### pistons_roster_script.sql
 
-## Use PostMan to execute CRUD commands.
+## Use PostMan to execute CRUD commands, which can be downloaded from https://www.postman.com/
+## or type command into browser
 
 ### GET endpoints:
 #### Get all players: http://localhost:8080/players
