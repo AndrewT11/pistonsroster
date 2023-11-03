@@ -15,12 +15,12 @@ Open included .SQL script in sql_script folder in MySQL Workbench:
 ## To run CRUD commands 
 * Use PostMan, which can be downloaded from https://www.postman.com/. Simple GET commands easily run in browser.
 * User and password will be needed in authorization tab. Use basic auth. 
-** Users and permissions: andrew (EMPLOYEE, MANAGER, ADMIN), greg (EMPLOYEE, MANAGER), monique (EMPLOYEE)
-** All passwords: testing123
-** Password may be changed in setup-spring-security-database-bcrypt-custom-tables.sql file, but must use bcrypt encryption or change password to {noop} for plain text. Changing {bcrypt} password can be done at https://www.bcryptcalculator.com/
-** EMPLOYEE permission allows all GET commands.
-** MANAGER permission allows for POST and PUT commands.
-** ADMIN permission allows for DELETE command.
+* Users and permissions: andrew (EMPLOYEE, MANAGER, ADMIN), greg (EMPLOYEE, MANAGER), monique (EMPLOYEE)
+* All passwords: testing123
+* Password may be changed in setup-spring-security-database-bcrypt-custom-tables.sql file, but must use bcrypt encryption or change password to {noop} for plain text. Changing {bcrypt} password can be done at https://www.bcryptcalculator.com/
+* EMPLOYEE permission allows all GET commands.
+* MANAGER permission allows for POST and PUT commands.
+* ADMIN permission allows for DELETE command.
 
 ## GET endpoints:
 * Get all players: http://localhost:8080/players
