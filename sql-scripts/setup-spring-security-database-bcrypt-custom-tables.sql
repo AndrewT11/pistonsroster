@@ -25,9 +25,9 @@ CREATE TABLE `members` (
 
 INSERT INTO `members`
 VALUES
-('andrew','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C'),
-('greg','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C'),
-('monique','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C');
+('andrew','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C', 1),
+('greg','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C', 1),
+('monique','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C', 1);
 
 --
 -- Table structure for table 'authorities'
