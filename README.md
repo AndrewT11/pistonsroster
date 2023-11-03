@@ -53,6 +53,7 @@ Open included .SQL script in sql_script folder in MySQL Workbench:
 * Java
 * Spring, Spring Boot
 * MySQL
+* Maven
 
 ## Credits
 * Andrew Tran sole author
