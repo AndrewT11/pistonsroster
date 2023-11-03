@@ -54,7 +54,7 @@ public class PlayerController {
     }
 
     @DeleteMapping("/players/{id}")
-    public void deletePlayer(@PathVariable int id) {
+    public String deletePlayer(@PathVariable int id) {
         Player thePlayer = playerService.findById(id);
 
         if(thePlayer == null) {
@@ -63,5 +63,6 @@ public class PlayerController {
 
         playerService.deleteById(id);
 
+        return "Deleted player number: " + id;
     }
 }
