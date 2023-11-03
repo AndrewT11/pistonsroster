@@ -25,8 +25,8 @@ CREATE TABLE `members` (
 
 INSERT INTO `members`
 VALUES
-('andrew','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C')
-('greg','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C')
+('andrew','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C'),
+('greg','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C'),
 ('monique','{bcrypt}$2a$10$x0jSk1oMB5lR25WhfcUF7ePEnfxNS500i2nwiGvUKWJ1cdHDGLO0C')
 
 --
@@ -46,9 +46,9 @@ CREATE TABLE  `roles` (
 
 INSERT INTO `roles`
 VALUES
-('andrew','ROLE_EMPLOYEE')
-('andrew','ROLE_MANAGER')
-('andrew','ROLE_ADMIN')
-('greg','ROLE_EMPLOYEE')
-('greg','ROLE_MANAGER')
+('andrew','ROLE_EMPLOYEE'),
+('andrew','ROLE_MANAGER'),
+('andrew','ROLE_ADMIN'),
+('greg','ROLE_EMPLOYEE'),
+('greg','ROLE_MANAGER'),
 ('monique','ROLE_EMPLOYEE')
