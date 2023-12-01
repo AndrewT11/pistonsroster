@@ -6,9 +6,14 @@ import jakarta.persistence.*;
 @Table(name="roster")
 public class Player {
     // define fields
+
     @Id
-    @Column(name="number")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
     private int id;
+
+    @Column(name="number")
+    private int number;
 
     @Column(name="first_name")
     private String firstName;
@@ -42,6 +47,14 @@ public class Player {
         this.id = id;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -70,6 +83,7 @@ public class Player {
     public String toString() {
         return "Player{" +
                 "id=" + id +
+                ", number=" + number +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", position='" + position + '\'' +

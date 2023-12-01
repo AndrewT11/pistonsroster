@@ -7,11 +7,12 @@ USE `pistons_roster`;
 DROP TABLE IF EXISTS `roster`;
 
 CREATE TABLE `roster`(
+    `id` int NOT NULL AUTO_INCREMENT,
 	`number` int NOT NULL,
     `first_name` VARCHAR(45) DEFAULT NULL,
     `last_name` VARCHAR(45) DEFAULT NULL,
     `position` VARCHAR(15) DEFAULT NULL,
-    PRIMARY KEY (`number`)
+    PRIMARY KEY (`id`)
 );
 
 --
