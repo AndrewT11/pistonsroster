@@ -24,7 +24,7 @@ Open included .SQL script in sql_script folder in MySQL Workbench:
 
 ## GET endpoints:
 * Get all players: http://localhost:8080/players
-* Get player by number: http://localhost:8080/players/{number}
+* Get player by number: http://localhost:8080/players/{id}
 
 ## POST endpoint:
 * Add a new player: http://localhost:8080/players
@@ -47,7 +47,7 @@ Open included .SQL script in sql_script folder in MySQL Workbench:
       }
 
 ## DELETE endpoint:
-* Delete a player: http://localhost:8080/players/{number}
+* Delete a player: http://localhost:8080/players/{id}
 
 ## Technologies
 * Java
