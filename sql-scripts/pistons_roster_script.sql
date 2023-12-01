@@ -20,21 +20,21 @@ CREATE TABLE `roster`(
 --
 
 INSERT INTO `roster` VALUES
-	(2, 'Cade', 'Cunningham', 'PG'),
-    (35, 'Marvin', 'Bagley III', 'PF'),
-    (27, 'Buddy', 'Boeheim', 'F'),
-    (44, 'Bojan', 'Bogdanovic', 'SF'),
-    (14, 'Alec', 'Burks', 'SG'),
-    (20, 'Malcolm', 'Cazalon', 'G'),
-    (0, 'Jalen', 'Duren', 'C'),
-    (31,'Joe','Harris','SF'),
-    (7,'Killian','Hayes','PG'),
-    (23,'Jaden','Ivey','G'),
-    (12,'Isaiah','Livers','PF'),
-    (5,'Monte','Morris','PG'),
-    (4,'Jontay','Porter','C'),
-    (8,'Jared','Rhoden','G'),
-    (28,'Isaiah','Stewart','C'),
-    (9,'Ausar','Thompson','F'),
-    (13,'James','Wiseman','C');
+	(1, 2, 'Cade', 'Cunningham', 'PG'),
+    (2, 35, 'Marvin', 'Bagley III', 'PF'),
+    (3, 27, 'Buddy', 'Boeheim', 'F'),
+    (4, 44, 'Bojan', 'Bogdanovic', 'SF'),
+    (5, 14, 'Alec', 'Burks', 'SG'),
+    (6, 20, 'Malcolm', 'Cazalon', 'G'),
+    (7, 0, 'Jalen', 'Duren', 'C'),
+    (8, 31,'Joe','Harris','SF'),
+    (9, 7,'Killian','Hayes','PG'),
+    (10, 23,'Jaden','Ivey','G'),
+    (11, 12,'Isaiah','Livers','PF'),
+    (12, 5,'Monte','Morris','PG'),
+    (13, 4,'Jontay','Porter','C'),
+    (14, 8,'Jared','Rhoden','G'),
+    (15, 28,'Isaiah','Stewart','C'),
+    (16, 9,'Ausar','Thompson','F'),
+    (17, 13,'James','Wiseman','C');
     
