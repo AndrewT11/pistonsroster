@@ -30,7 +30,7 @@ Open included .SQL script in sql_script folder in MySQL Workbench:
 * Add a new player: http://localhost:8080/players
 * JSON format for adding player example: 
     {
-      "id": 25,
+      "number": 25,
       "firstName": "Marcus",
       "lastName": "Sasser",
       "position": "PG"
@@ -40,10 +40,10 @@ Open included .SQL script in sql_script folder in MySQL Workbench:
 * Update a player: http://localhost:8080/players
 * JSON format for updating player example: 
     {
-      "id": 25,
+      "number": 25,
       "firstName": "Marcus",
       "lastName": "Sasser",
-      "position": "PG"
+      "position": "PG/SG"
       }
 
 ## DELETE endpoint:
