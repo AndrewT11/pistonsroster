@@ -31,13 +31,11 @@ public class PlayerServiceImpl implements PlayerService{
     }
 
     @Override
-    @Transactional
     public Player save(Player thePlayer) {
         return playerRepository.save(thePlayer);
     }
 
     @Override
-    @Transactional
     public void deleteById(int id) {
         playerRepository.deleteById(id);
     }
