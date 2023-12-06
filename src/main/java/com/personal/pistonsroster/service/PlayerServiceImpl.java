@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PlayerServiceImpl implements PlayerService{
@@ -27,7 +28,18 @@ public class PlayerServiceImpl implements PlayerService{
 
     @Override
     public Player findById(int id) {
-        return playerRepository.findById(id);
+        Optional<Player> result = playerRepository.findById(id);
+
+        Player thePlayer = null;
+
+        if(result.isPresent()) {
+            thePlayer = result.get();
+        } else {
+            // did not find player by that id
+            throw new RuntimeException("Did not find player id - " + id);
+        }
+
+        return thePlayer;
     }
 
     @Override
