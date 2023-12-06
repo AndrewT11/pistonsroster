@@ -30,8 +30,9 @@ public class Player {
 
     // args constructor
 
-    public Player(int id, String firstName, String lastName, String position) {
+    public Player(int id, int number, String firstName, String lastName, String position) {
         this.id = id;
+        this.number = number;
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
