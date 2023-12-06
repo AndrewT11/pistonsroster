@@ -39,7 +39,7 @@ public class PlayerController {
 
     @PostMapping("/players")
     public Player addPlayer(@RequestBody Player thePlayer) {
-        Player thePlayerId = playerService.findById(thePlayer.getId());
+        thePlayer.setId(0);
 
         Player dbPlayer = playerService.save(thePlayer);
 
