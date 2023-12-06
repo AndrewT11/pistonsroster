@@ -1,7 +1,6 @@
 package com.personal.pistonsroster.service;
 
-import com.personal.pistonsroster.dao.PlayerDAO;
-import com.personal.pistonsroster.dao.PlayerDAOImpl;
+import com.personal.pistonsroster.dao.PlayerRepository;
 import com.personal.pistonsroster.entity.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,32 +11,34 @@ import java.util.List;
 @Service
 public class PlayerServiceImpl implements PlayerService{
 
-    private PlayerDAO playerDAO;
+    private PlayerRepository playerRepository;
 
     @Autowired
-    public PlayerServiceImpl(PlayerDAO thePlayerDAO) {
-        this.playerDAO = thePlayerDAO;
+    public PlayerServiceImpl(PlayerRepository thePlayerRepository) {
+
+        this.playerRepository = thePlayerRepository;
     }
 
     @Override
     public List<Player> findAll() {
-        return playerDAO.findAll();
+
+        return playerRepository.findAll();
     }
 
     @Override
     public Player findById(int id) {
-        return playerDAO.findById(id);
+        return playerRepository.findById(id);
     }
 
     @Override
     @Transactional
     public Player save(Player thePlayer) {
-        return playerDAO.save(thePlayer);
+        return playerRepository.save(thePlayer);
     }
 
     @Override
     @Transactional
     public void deleteById(int id) {
-        playerDAO.deleteById(id);
+        playerRepository.deleteById(id);
     }
 }
