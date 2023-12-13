@@ -39,7 +39,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET,"/players").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.GET,"/players/**").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.POST,"/players").hasRole("MANAGER")
-                        .requestMatchers(HttpMethod.PUT,"/players").hasRole("MANAGER")
+                        .requestMatchers(HttpMethod.PUT,"/players/**").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.DELETE,"/players/**").hasRole("ADMIN")
         );
         // use HTTP basic authentication
