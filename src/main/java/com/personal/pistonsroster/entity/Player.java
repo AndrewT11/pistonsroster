@@ -8,7 +8,7 @@ public class Player {
     // define fields
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
 
@@ -30,8 +30,7 @@ public class Player {
 
     // args constructor
 
-    public Player(int id, int number, String firstName, String lastName, String position) {
-        this.id = id;
+    public Player(int number, String firstName, String lastName, String position) {
         this.number = number;
         this.firstName = firstName;
         this.lastName = lastName;
