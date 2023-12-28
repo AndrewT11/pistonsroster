@@ -32,6 +32,7 @@ public class SecurityConfig {
         return jdbcUserDetailsManager;
     }
 
+    // .hasAnyRole(comma delimited roles)
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(configurer ->
@@ -39,6 +40,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET,"/players").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.GET,"/players/**").hasRole("EMPLOYEE")
                         .requestMatchers(HttpMethod.POST,"/players").hasRole("MANAGER")
+                        // Will need to change wildcard for PUT depending on if using starter-data-rest or not
                         .requestMatchers(HttpMethod.PUT,"/players/**").hasRole("MANAGER")
                         .requestMatchers(HttpMethod.DELETE,"/players/**").hasRole("ADMIN")
         );
