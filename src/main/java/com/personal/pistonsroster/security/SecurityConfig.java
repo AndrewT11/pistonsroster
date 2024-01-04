@@ -17,6 +17,11 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsManager userDetailsManager(DataSource datasource) {
+
+        // If using username/authority tables by default:
+        // return new JdbcUserDetailsManager(dataSource);
+
+        // custom tables method
         JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(datasource);
 
         // define query to retrieve a user by username
